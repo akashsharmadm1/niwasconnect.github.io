@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NiwasConnect · Private Land Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-main: #060D1A;
+    --bg-card: #0A192F;
+    --gold: #D4AF37;
+    --gold-dim: #AA8B2C;
+    --text-white: #F0F4F8;
+    --text-muted: #8A99AD;
+    --border-color: #1E2D42;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    position: relative;
+  }
+
+  body::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+    z-index: 1;
+  }
+
+  .portal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--gold);
+    max-width: 540px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+  }
+
+  .header-area {
+    text-align: center;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 24px;
+  }
+
+  .brand-title {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--text-white);
+    margin-bottom: 4px;
+  }
+
+  .brand-subtitle {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .intro-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+
+  label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  input[type="text"], input[type="email"], input[type="tel"], select {
+    width: 100%;
+    background: rgba(6, 13, 26, 0.5);
+    border: 1px solid var(--border-color);
+    padding: 14px 16px;
+    color: var(--text-white);
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    appearance: none; /* Removes default browser styling for select boxes */
+    -webkit-appearance: none;
+  }
+
+  /* Custom dropdown arrow element design overlay */
+  .select-wrapper {
+    position: relative;
+  }
+
+  .select-wrapper::after {
+    content: "▾";
+    font-size: 16px;
+    color: var(--gold);
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  /* Style dropdown options background for browser dropdown popup window */
+  select option {
+    background-color: var(--bg-card);
+    color: var(--text-white);
+  }
+
+  input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(6, 13, 26, 0.8);
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dim) 100%);
+    border: none;
+    color: #060D1A;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.1s ease, opacity 0.2s ease;
+    margin-top: 12px;
+  }
+
+  .submit-btn:hover { opacity: 0.95; }
+  .submit-btn:active { transform: scale(0.99); }
+
+  .trust-footer {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 24px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div class="portal-card">
+  <div class="header-area">
+    <div class="brand-title">NIWASCONNECT</div>
+    <div class="brand-subtitle">Private Land Intelligence</div>
+  </div>
+
+  <p class="intro-text">
+    Before executing a handshake deal or handing over non-refundable earnest money, deploy our local legal circle to audit un-digitized archives.
+  </p>
+
+  <form action="https://formspree.io/f/xkoeonjp" method="POST">
+    
+    <div class="form-group">
+      <label for="fullname">Your Name</label>
+      <input type="text" id="fullname" name="Client Name" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="Client Email" placeholder="username@domain.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="whatsapp">WhatsApp Delivery Hotline</label>
+      <input type="tel" id="whatsapp" name="WhatsApp Number" placeholder="+91 XXXXX-XXXXX" required>
+    </div>
+
+    <div class="form-group">
+      <label for="user_role">You Are A</label>
+      <div class="select-wrapper">
+        <select id="user_role" name="User Identity Role" required>
+          <option value="" disabled selected>Select your profile role...</option>
+          <option value="Buyer">Prospective Property Buyer</option>
+          <option value="Seller">Property Owner / Seller</option>
+          <option value="Broker">Real Estate Broker / Consultant</option>
+          <option value="Architect">Architect / Design Partner</option>
+          <option value="Other">Other / Institutional Investor</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="property_type">Target Property Type</label>
+      <div class="select-wrapper">
+        <select id="property_type" name="Asset Property Type" required>
+          <option value="" disabled selected>Select property classification...</option>
+          <option value="Residential Plot">Vacant Residential Plot / Land Parcel</option>
+          <option value="Independent House / Villa">Independent House / Premium Villa</option>
+          <option value="Apartment / Flat">Residential Apartment / Gated Flat</option>
+          <option value="Commercial Land">Commercial Plot / Institutional Space</option>
+          <option value="Agricultural Land">Agricultural Land Parcel</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="location">Property Location Pocket</label>
+      <input type="text" id="location" name="Target Location" placeholder="e.g., Rajpur Road, Jakhan, Dehradun" required>
+    </div>
+
+    <div class="form-group">
+      <label for="property_id">Government Property Reference</label>
+      <input type="text" id="property_id" name="Property Reference ID" placeholder="Enter Khasra No., Khatauni No., or Municipal ID" required>
+    </div>
+
+    <input type="text" name="_honey" style="display:none">
+
+    <button type="submit" class="submit-btn">Request Verification</button>
+
+  </form>
+
+  <p class="trust-footer">
+    NiwasConnect respects your security profile. We strictly never request confidential identity credentials (Aadhaar/PAN) to perform tracking checks.
+  </p>
+</div>
+
+</body>
+</html>
